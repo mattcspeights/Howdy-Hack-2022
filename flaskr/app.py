@@ -1,6 +1,6 @@
 from flask import render_template, Blueprint, Flask
 
-bp = Blueprint('test', __name__)
+bp = Blueprint('main', __name__)
 
 @bp.route('/')
 def home():
@@ -10,8 +10,15 @@ def home():
 @bp.route('/loggedIn')
 def homeLoggedIn():
 
-    return 
+    return render_template("home.hl")
+
+@bp.route('/signUp')
+def homeSignUp():
+
+    return render_template("home.hl")
+
 app = Flask(__name__)
 app.register_blueprint(bp)
-app.add_url_rule('/', endpoint='test')
-app.add_url_rule('/benis', endpoint='test')
+app.add_url_rule('/', endpoint='home')
+app.add_url_rule('/loggedIn', endpoint='loggedIn')
+app.add_url_rule('/signUp', endpoint='signUp')

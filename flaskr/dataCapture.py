@@ -22,6 +22,6 @@ print(df)
 def findUser(username):
     print(df[df["User Name"] == username])
 
-pd.concat([df, pd.Series(['matthew', 'test', '12345', 'test', 'test', 'test', 'test'])])
+df.loc[len(df.index)] = ['matthew', 'test', '12345', 'test', 'test', 'test', 'test']
 
-print(df)
+findUser("matthew")
