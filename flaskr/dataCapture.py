@@ -1,7 +1,6 @@
 import pandas as pd
 import hashlib
 import pickle
-import numpy as np
 
 '''
 Frame Data:
@@ -22,7 +21,7 @@ def hashPass(password):
 df = pd.read_pickle("userData.pkl")
 
 def findUserIndex(username):
-    return df[df["User Name"] == "matthew"].index.values[0]
+    return df[df["User Name"] == username].index.values[0]
 
 def inDf(username):
     if username in df["User Name"].unique():
@@ -47,4 +46,8 @@ def checkPass(username, password):
     if getPassword(findUserIndex(username)) == hashPass(password):
         return 1
     
-df.loc[len(df.index)] = ['matthew', 'test', hashPass("12345"), 'test', 'test', 'test', 'test']
+def addUserInfo(userData, username, email, password, seats, origin, destination, passengers):
+    userData.loc[len(userData.index)] = [username, email, hashPass(password), seats, origin, destination, passengers]
+
+addUserInfo(df, "matthew", "mattcspeights@gmail.com", "123", "4", "", "test", "test")
+
