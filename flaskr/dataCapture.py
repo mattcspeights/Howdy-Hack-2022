@@ -26,7 +26,7 @@ def inDf(df, username):
         return True
 
 def storePassword(username, password, df):
-    df.loc[findUserIndex(username), "Password"] = hashPass(password)
+    df.loc[findUserIndex(df,username), "Password"] = hashPass(password)
 
 def getPassword(df, index):
     return df.iloc[index]["Password"]
@@ -42,6 +42,33 @@ def checkPass(df, username, password):
     if getPassword(df, findUserIndex(df, username)) == hashPass(password):
         return 1
     
-def addUserInfo(userData, username, email, password, seats, origin, destination, passengers):
-    userData.loc[len(userData.index)] = [username, email, hashPass(password), seats, origin, destination, passengers]
+def addUserInfo(userData, username, email, password, origin):
+    userData.loc[len(userData.index)] = [username, email, hashPass(password), 0, origin, "", []]
 
+def modifySeats(df, username, seats):
+    df.loc[findUserIndex(df,username), "Seats"] = seats
+
+def modifyDestination(df, username, destination):
+    df.loc[findUserIndex(df,username), "Destination"] = destination
+
+def modifyPassengers(df, username, passengers):
+    df.loc[findUserIndex(df,username), "Passengers"].append(passengers)
+
+def readUserData(filename):
+    df = pd.read_pickle(filename)
+    return df
+
+def writeUserData(df, filename):
+    df.to_pickle(filename)
+
+#df = readUserData("userData.pkl")
+
+#addUserInfo(df, "killian", "killian@gmail.com", "Password", "Your moms house")
+
+#modifySeats(df, "killian", 3)
+#modifyDestination(df, "killian", "Your dads house")
+#modifyPassengers(df, "killian", ["evan", "tyler"])
+
+#print(df)
+
+#writeUserData(df, "userData.pkl")
