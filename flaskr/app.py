@@ -5,7 +5,7 @@ bp = Blueprint('test', __name__)
 @bp.route('/')
 def test():
 
-    return render_template("template.hl")
+    return render_template("home.hl")
 
 app = Flask(__name__)
 app.register_blueprint(bp)
