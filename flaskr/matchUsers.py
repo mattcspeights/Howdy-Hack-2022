@@ -5,5 +5,6 @@ def matchUsers(df, username):
     destination = df.iloc[findUserIndex(username)]["Destination"]
     matchedUsers = []
 
-    for i in range(len(df.index)):
-        pass
+    matchFrame = df[df["Destination"] == destination]
+
+testFrame = {}
