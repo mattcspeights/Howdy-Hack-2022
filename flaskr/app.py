@@ -7,6 +7,10 @@ def home():
 
     return render_template("home.hl")
 
+@bp.route('/loggedIn')
+def homeLoggedIn():
+
+    return 
 app = Flask(__name__)
 app.register_blueprint(bp)
 app.add_url_rule('/', endpoint='test')
