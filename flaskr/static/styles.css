@@ -1,6 +1,6 @@
 hr {
 	height: 2px;
-	background-color: #800000;
+	background-color: #800000; /*maroon*/
 	border: none;
 }
 
@@ -21,7 +21,7 @@ h2 {
 }
 
 .pagination a:hover:not(.active) {
-	background-color:#800000;
+	background-color:#ddd;
 	border-radius: 5px;
 }
 
@@ -36,29 +36,12 @@ h2 {
 body {
 	background-color: white;
 	background-color: radial-gradient(circle, rgba(138,170,239,1) 0%, rgba(255,255,255,1) 100%);
-	color: #800000 /* sets text color to some shade of purple */
+	color: #800000
 }
 
 #name {
 	text-align:center;
 }
-
-
-#headshot {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 12%;
-	border-radius: 25%;
-}
-
-#iframe-wrapper {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-}
-
 * {
 	box-sizing: border-box;
 }
