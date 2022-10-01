@@ -1,0 +1,115 @@
+hr {
+	height: 2px;
+	background-color: #330080;
+	border: none;
+}
+
+h2 {
+	text-align: center
+}
+
+.pagination a {
+	color: #330080;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.pagination a.active {
+	background-color: #330080;
+	color: white;
+	border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+	background-color:#ddd;
+	border-radius: 5px;
+}
+
+#style-toggle-button {
+	background-color: #330080;
+	color: white;
+	text-align: center;
+	border-radius: 12px;
+	float: right;
+}
+
+body {
+	background-color: rgb(138,170,239);
+	background-color: radial-gradient(circle, rgba(138,170,239,1) 0%, rgba(255,255,255,1) 100%);
+	color: #330080 /* sets text color to some shade of purple */
+}
+
+#name {
+	text-align:center;
+}
+
+
+#headshot {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 12%;
+	border-radius: 25%;
+}
+
+#iframe-wrapper {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* allows columns to float next to each other */
+.column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
+/* removes extra margins */
+.row {
+	/*margin: 0 -5px;*/
+	margin: auto;
+	width: 100%;
+	/*padding: 10px;*/
+	
+}
+
+/* clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* styles the counter cards */
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* card effect */
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+/*Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+.socials {
+	text-align:center;
+	bottom: 0%;
+	/*position: fixed;*/
+}
+
+.socials-img {
+	width: 50px;
+	height: 50px;
+	display:inline-block;
+}

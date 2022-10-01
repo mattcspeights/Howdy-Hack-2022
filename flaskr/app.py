@@ -10,7 +10,7 @@ def home():
 @bp.route('/loggedIn')
 def homeLoggedIn():
 
-    return render_template("home.hl")
+    return render_template("loggedIn.hl")
 
 @bp.route('/signUp')
 def homeSignUp():

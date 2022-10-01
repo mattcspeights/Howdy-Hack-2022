@@ -2,16 +2,76 @@
 <html>
   <head>
     <title>Welcome to our website</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
-    <div>
-      <p>BaWls</p>
+    <div class = "pagination">
+      <a href="home.html" class = "active">home</a>
+    </div>
 
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
-
-      <img src="{{url_for('static', filename='cursedclub.jpg')}}">
-
-      <img src="{{url_for('static', filename='giphy.gif')}}">
+    <div class="row">
+      <div class ="column">
+        <div class = "card">
+        <p>
+          <b>Online Voter Form at <a href = "https://tamuhack.com/">TAMUhack</a> Hackathon 2022</b>
+        </p>
+        <a href="https://github.com/taadith/Hackathon-2022" target = "_blank">
+            <img class = "projects-img" src = "voting-icon.svg" style="width:92px;height:60px;display:inline-block"/>
+          </a>
+        <p>
+        I attended my first Hackathon hosted at Texas A&M, where I sought out to create an online voter form.
+        This was my first attempt at creating a front-end web application, and even though it wasn't completed or close to being a viable product it was a great experience for myself.
+        </p>
+      </div>
+      </div>
+      
+      <div class = "column">
+      <div class = "card">
+        <p>
+          <b>Matrices, Neural Networks, and MNIST in C/C++</b>
+        <br>
+        </p>
+        <a href="https://github.com/taadith/matrices-neural-networks-and-mnist" target = "_blank">
+            <img class = "projects-img" src = "linear-algebra-icon.svg" style="width:60px;height:60px;display:inline-block"/>
+          </a>
+        <p>
+        Over the months in the summer of 2022, I started relearning linear algebra and teaching myself fourier series.
+        Out of this personal learning goal came an interest in applying my knowledge to C/C++ libraries created by myself.
+        </p>
+      </div>
+      </div>
+      
+      <div class = "column">
+      <div class = "card">
+        <p>
+          <b>Personal Website Development</b>
+        <br>
+        </p>
+        <a href="https://github.tamu.edu/aaditht/CSCE_315_Lab" target = "_blank">
+            <img class = "projects-img" src = "web-app-icon.svg" style="width:76px;height:76px;display:inline-block"/>
+          </a>
+        <p>
+        This project grew from a project assigned for my "Foundations of Software Engineering" class and became the perfect foundation to learn front-end development and showcase myself.
+        </p>
+      </div>
+      </div>
+      
+      <div class = "column">
+      <div class = "card">
+        <p>
+          <b>HTML Scrapping w/ HNT Token (Helium Cryptocurrency) Prices</b>
+        <br>
+        </p>
+        <a href="https://github.com/taadith/HNT-Market-Price" target = "_blank">
+            <img class = "projects-img" src = "helium-hnt-logo.svg" style="width:59px;height:59px;display:inline-block"/>
+          </a>
+        <p>
+        Over the summer of 2021, I had an internship with a startup company called Maxwell IoT Technologies that took a particular interest in Helium. 
+        Helium is a that company specializs in LoRaWAN (Long Range Wide Area Network) routers and attaching a cryptocurrency as a reward to hosting these routers.
+        I had the special task of creating some sort of HTML scraper that returned the current price of the HNT token (Helium's cryptocurrency) because because API access to the website had a paywall.
+        </p>
+      </div>
+      </div>
     </div>
   </body>
 </html>
