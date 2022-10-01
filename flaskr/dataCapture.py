@@ -15,24 +15,36 @@ destination:string
 passengers: other users that are riding with 
 '''
 
-def HashPass(password):
+def hashPass(password):
     hashedPass = hashlib.sha256(password.encode('utf-8')).hexdigest()
     return hashedPass
 
 df = pd.read_pickle("userData.pkl")
 
-def storePassowrd(username, password, df):
+def findUserIndex(username):
+    return df[df["User Name"] == "matthew"].index.values[0]
+
+def inDf(username):
+    if username in df["User Name"].unique():
+        return True
+
+def storePassword(username, password, df):
     # hash password
 
-    df.loc[np.where(df["User Name"] == username)][password] = password
+    df.loc[findUserIndex(username), "Password"] = hashPass(password)
 
-def findUser(username):
-    print(df[df["User Name"] == username]["Password"][0])
+def getPassword(index):
+    return df.iloc[index]["Password"]
 
-df.loc[len(df.index)] = ['matthew', 'test', '12345', 'test', 'test', 'test', 'test']
-
-findUser("matthew")
-
-storePassowrd("matthew", "cheeseBawls", df)
-
-findUser("matthew")
+"""
+return codes:
+-1: Login information invalid
+1: Successful login
+"""
+def checkPass(username, password):
+    if not inDf(username):
+        return -1
+    if getPassword(findUserIndex(username)) == hashPass(password):
+        return 1
+    
+df.loc[len(df.index)] = ['matthew', 'test', hashPass("12345"), 'test', 'test', 'test', 'test']
