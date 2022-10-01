@@ -1,4 +1,3 @@
-{% extends header.hl %}
 <!DOCTYPE html>
 <html>
   <head>
