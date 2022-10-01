@@ -19,4 +19,9 @@ df = pd.read_pickle("userData.pkl")
 
 print(df)
 
-df.to_pickle('userData.pkl')
+def findUser(username):
+    print(df[df["User Name"] == username])
+
+pd.concat([df, pd.Series(['matthew', 'test', '12345', 'test', 'test', 'test', 'test'])])
+
+print(df)
