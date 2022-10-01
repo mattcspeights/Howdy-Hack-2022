@@ -10,3 +10,4 @@ def test():
 app = Flask(__name__)
 app.register_blueprint(bp)
 app.add_url_rule('/', endpoint='test')
+app.add_url_rule('/benis', endpoint='test')
