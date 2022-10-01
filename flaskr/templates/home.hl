@@ -6,7 +6,8 @@
   </head>
   <body>
     <div class = "pagination">
-      <a href="home.html" class = "active">home</a>
+      <a href="home.hl" class = "active">home</a>
+	  <a href="about.hl">about</a>
     </div>
 	
 	<hr id = "hr0">
@@ -16,7 +17,7 @@
       <div class ="column">
         <div class = "card">
         <p>
-          <b>Online Voter Form at <a href = "https://tamuhack.com/">TAMUhack</a> Hackathon 2022</b>
+          <h2>Sign-Up</h2>
         </p>
         <p>
         I attended my first Hackathon hosted at Texas A&M, where I sought out to create an online voter form.
@@ -28,8 +29,7 @@
       <div class = "column">
         <div class = "card">
           <p>
-            <b>Matrices, Neural Networks, and MNIST in C/C++</b>
-            <br>
+            <h2>Sign-In</h2>
           </p>
           <p>
           Over the months in the summer of 2022, I started relearning linear algebra and teaching myself fourier series.

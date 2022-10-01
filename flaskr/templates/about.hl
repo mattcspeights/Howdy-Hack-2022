@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to our website</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
+  </head>
+  <body>
+    <div class = "pagination">
+      <a href="home.hl">home</a>
+	  <a href="about.hl" class = "active">about</a>
+    </div>
+	
+	<hr id = "hr0">
+	<h1 id =  "title">Rev Match!</h1>
+
+    <div class="row">
+      <div class ="column">
+        <div class = "card">
+        <p>
+          <b>Online Voter Form at <a href = "https://tamuhack.com/">TAMUhack</a> Hackathon 2022</b>
+        </p>
+        <p>
+        I attended my first Hackathon hosted at Texas A&M, where I sought out to create an online voter form.
+        This was my first attempt at creating a front-end web application, and even though it wasn't completed or close to being a viable product it was a great experience for myself.
+        </p>
+      </div>
+      </div>
+      
+      <div class = "column">
+        <div class = "card">
+          <p>
+            <b>Matrices, Neural Networks, and MNIST in C/C++</b>
+            <br>
+          </p>
+          <p>
+          Over the months in the summer of 2022, I started relearning linear algebra and teaching myself fourier series.
+          Out of this personal learning goal came an interest in applying my knowledge to C/C++ libraries created by myself.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
