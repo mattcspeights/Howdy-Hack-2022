@@ -38,7 +38,7 @@
 		    <label for="fname">Username:</label><br>
 		    <input type="text" id="uname" name="uname" placeholder="John"><br>
 		    <label for="pword">Password:</label><br>
-		    <input type="text" id="pword" name="pword" placeholder="Doe"><br><br>
+		    <input type="password" id="pword" name="pword" placeholder="Doe"><br><br>
 		    <input type="submit" value="Submit">
 		  </form>
         </div>
