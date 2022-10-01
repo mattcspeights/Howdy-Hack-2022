@@ -3,6 +3,11 @@ from flask import render_template, Blueprint, Flask
 bp = Blueprint('main', __name__)
 
 @bp.route('/')
+def base():
+
+    return render_template("home.hl")
+
+@bp.route('/home')
 def home():
 
     return render_template("home.hl")
@@ -24,7 +29,8 @@ def about():
 
 app = Flask(__name__)
 app.register_blueprint(bp)
-app.add_url_rule('/', endpoint='home')
+app.add_url_rule('/', endpoint='base')
+app.add_url_rule('/home', endpoint='home')
 app.add_url_rule('/about', endpoint = 'about')
 app.add_url_rule('/loggedIn', endpoint='loggedIn')
 app.add_url_rule('/signUp', endpoint='signUp')

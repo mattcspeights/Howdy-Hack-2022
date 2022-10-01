@@ -1,3 +1,4 @@
+{% extends header.hl %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,8 +7,8 @@
   </head>
   <body>
     <div class = "pagination">
-      <a href="home.hl" class = "active">home</a>
-	  <a href="about.hl">about</a>
+      <a href="{{url_for('home')}}">home</a>
+	  <a href="{{url_for('about')}}">about</a>
     </div>
 	
 	<hr id = "hr0">
