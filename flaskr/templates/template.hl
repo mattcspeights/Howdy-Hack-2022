@@ -1,7 +1,16 @@
-<div>
-    <p>BaWls</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to our website</title>
+  </head>
+  <body>
+    <div>
+      <p>BaWls</p>
 
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
 
-    <img src="cursedclub.jpg" alt="Cursed">
-</div>
+      <img src="cursedclub.jpg" alt="Cursed">
+    </div>
+  </body>
+</html>
+
