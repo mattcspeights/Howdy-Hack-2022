@@ -1,5 +1,5 @@
 import pandas as pd
-from hashlib import sha256
+import hashlib
 import pickle
 
 '''
@@ -13,6 +13,10 @@ origin:string
 destination:string
 passengers: other users that are riding with 
 '''
+
+def HashPass(password):
+    hashedPass = hashlib.sha256(password.encode('utf-8')).hexdigest()
+    return hashedPass
 
 df = pd.read_pickle("userData.pkl")
 
