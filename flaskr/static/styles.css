@@ -1,6 +1,6 @@
 hr {
 	height: 2px;
-	background-color: #330080;
+	background-color: #800000;
 	border: none;
 }
 
@@ -9,24 +9,24 @@ h2 {
 }
 
 .pagination a {
-	color: #330080;
+	color: #800000;
 	padding: 8px 16px;
 	text-decoration: none;
 }
 
 .pagination a.active {
-	background-color: #330080;
+	background-color: #800000;
 	color: white;
 	border-radius: 5px;
 }
 
 .pagination a:hover:not(.active) {
-	background-color:#ddd;
+	background-color:#800000;
 	border-radius: 5px;
 }
 
 #style-toggle-button {
-	background-color: #330080;
+	background-color: #800000;
 	color: white;
 	text-align: center;
 	border-radius: 12px;
@@ -34,9 +34,9 @@ h2 {
 }
 
 body {
-	background-color: rgb(138,170,239);
+	background-color: white;
 	background-color: radial-gradient(circle, rgba(138,170,239,1) 0%, rgba(255,255,255,1) 100%);
-	color: #330080 /* sets text color to some shade of purple */
+	color: #800000 /* sets text color to some shade of purple */
 }
 
 #name {
