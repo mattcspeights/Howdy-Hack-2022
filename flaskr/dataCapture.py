@@ -18,21 +18,17 @@ def hashPass(password):
     hashedPass = hashlib.sha256(password.encode('utf-8')).hexdigest()
     return hashedPass
 
-df = pd.read_pickle("userData.pkl")
-
-def findUserIndex(username):
+def findUserIndex(df, username):
     return df[df["User Name"] == username].index.values[0]
 
-def inDf(username):
+def inDf(df, username):
     if username in df["User Name"].unique():
         return True
 
 def storePassword(username, password, df):
-    # hash password
-
     df.loc[findUserIndex(username), "Password"] = hashPass(password)
 
-def getPassword(index):
+def getPassword(df, index):
     return df.iloc[index]["Password"]
 
 """
@@ -40,14 +36,12 @@ return codes:
 -1: Login information invalid
 1: Successful login
 """
-def checkPass(username, password):
-    if not inDf(username):
+def checkPass(df, username, password):
+    if not inDf(df, username):
         return -1
-    if getPassword(findUserIndex(username)) == hashPass(password):
+    if getPassword(df, findUserIndex(df, username)) == hashPass(password):
         return 1
     
 def addUserInfo(userData, username, email, password, seats, origin, destination, passengers):
     userData.loc[len(userData.index)] = [username, email, hashPass(password), seats, origin, destination, passengers]
-
-addUserInfo(df, "matthew", "mattcspeights@gmail.com", "123", "4", "", "test", "test")
 
