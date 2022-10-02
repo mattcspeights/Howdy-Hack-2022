@@ -175,3 +175,8 @@ body {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.centerDiv {
+	margin-left: auto;
+	margin-right: auto;
+}

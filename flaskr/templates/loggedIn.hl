@@ -13,28 +13,30 @@
     <hr id = "hr0">
     
     <div id = "personal-welcome">
-       <h1>Welcome name to RevMatch!</h1>
+       <h1>Welcome {{name}} to RevMatch!</h1>
     </div>
     <div class = "column" id="li">
-      <div class = "ride-finder-card">
-        <label for="origin"><h2>Origin:</h2></label><br>
-				<input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
-        <div class="dropdown">
-          <h2>Where will you be going?</h2>
-          <button onclick="myFunction()" class="dropbtn">Location</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <a href="?destination=about">About</a>
-              <a href="?destination=base">Base</a>
-              <a href="?destination=blog">Blog</a>
-              <a href="?destination=contact">Contact</a>
-              <a href="?destination=custom">Custom</a>
-              <a href="?destination=support">Support</a>
-              <a href="?destination=tools">Tools</a>
+      <div class = "card">
+          <form method="post">
+            <div class="dropdown">
+              <h2>Destination</h2>
+              <button onclick="myFunction()" class="dropbtn">Location</button>
+              <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="?destination=about">About</a>
+                <a href="?destination=base">Base</a>
+                <a href="?destination=blog">Blog</a>
+                <a href="?destination=contact">Contact</a>
+                <a href="?destination=custom">Custom</a>
+                <a href="?destination=support">Support</a>
+                <a href="?destination=tools">Tools</a>
+                <br>
+              </div>
             </div>
-          </div>
-          <label for="hours">Hours:</label>
-           <select name="hours" id="hours">
+            <label for="origin"><h2>Origin:</h2></label>
+				    <input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
+            <label for="hours"><h2>Hours</h2></label>
+            <select name="hours" id="hours">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -48,8 +50,9 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-          <label for="mins">Minutes:</label>
-           <select name="mins" id="mins">
+            <br>
+            <label for="mins">Minutes:</label>
+            <select name="mins" id="mins">
               <option value="0">0</option>
               <option value="10">10</option>
               <option value="20">20</option>
@@ -57,11 +60,15 @@
               <option value="40">40</option>
               <option value="50">50</option>
             </select>
-          <label for="time">AM or PM:</label>
-           <select name="time" id="time">
+            <br>
+            <label for="time">AM or PM:</label>
+            <select name="time" id="time">
               <option value="am">AM</option>
               <option value="pm">PM</option>
             </select>
+            <br>
+            <button id = "updateData">Submit</button>
+          </form>
         </div>
       </div>
       <script src="../static/script.js"></script>
