@@ -7,6 +7,8 @@ import matchUsers as match
 import pandas as pd
 import requests as http
 
+loginInfo = ''
+
 bp = Blueprint('main', __name__)
 
 @bp.route('/', methods=['POST', 'GET'])
@@ -20,12 +22,14 @@ def base():
         #validate username
         if dc.checkPass(df, Username, UserPass) == 1:
             print("valid")
-            return redirect(url_for('loggedIn') + f'?username={Username}')
+            global loginInfo
+            loginInfo = f'?username={Username}'
+            return redirect(url_for('loggedIn') + loginInfo)
         else:
             print("not valid")
             return redirect(url_for('base'))
 
-    return render_template("home.hl")
+    return render_template("home.hl", loginInfo=loginInfo)
 
 @bp.route('/loggedIn', methods=['POST', 'GET'])
 def LoggedIn():
@@ -45,7 +49,7 @@ def LoggedIn():
         print(df)
         #print(match.matchUsers(df, UserName))
 
-        return redirect(url_for('matches') + f"?username={UserName}")
+        return redirect(url_for('matches') + loginInfo)
 
     
 
@@ -65,7 +69,7 @@ def SignUp():
         if dc.inDf(df, Username):
             print("invalid username")
             userExists = True
-            return render_template("signUp.hl", userExists=userExists)
+            return render_template("signUp.hl", loginInfo=loginInfo, userExists=userExists)
         else:
             #take collected info and add a new user
             dc.addUserInfo(df, Username, UserEmail, UserPass, UserAddress)
@@ -73,7 +77,7 @@ def SignUp():
             dc.writeUserData(df, "userData.pkl")
             return redirect(url_for('base'))
     else:
-        return render_template("signUp.hl")
+        return render_template("signUp.hl", loginInfo=loginInfo)
 
 @bp.route('/matches', methods=['POST', 'GET'])
 def matches():
@@ -82,14 +86,14 @@ def matches():
         UserName = request.args.get('username')
         userList = match.matchUsers(df, UserName)
 
-        return render_template('matches.hl', riderList=userList)
+        return render_template('matches.hl', loginInfo=loginInfo, riderList=userList)
 
-    return render_template('matches.hl')
+    return render_template('matches', loginInfo=loginInfo)
 
 @bp.route('/about')
 def about():
 
-    return render_template("about.hl")
+    return render_template("about.hl", loginInfo=loginInfo)
 
 app = Flask(__name__)
 app.register_blueprint(bp)
