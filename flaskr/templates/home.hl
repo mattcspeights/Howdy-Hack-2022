@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to our website</title>
+  <head style = "padding-top:10px;">
+    <title>RevRides Home Page</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
@@ -11,7 +11,10 @@
     </div>
 	
 	<hr id = "hr0">
-	<h1 id =  "title">Welcome to Rev Match!</h1>
+	<h1 id =  "title">Welcome to Rev Match!
+    <img class = "socials-img" src = "../static/reveille.svg">
+  </h1>
+
 	
   <div class = "column" id="si">
 	
@@ -28,6 +31,8 @@
       </form>
     </div>
   </div>
+
+  
 	<script src="../static/script.js"></script>
   </body>
 </html>
