@@ -23,13 +23,13 @@
           <button onclick="myFunction()" class="dropbtn">Location</button>
             <div id="myDropdown" class="dropdown-content">
               <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <a href="#about">About</a>
-              <a href="#base">Base</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a>
-              <a href="#custom">Custom</a>
-              <a href="#support">Support</a>
-              <a href="#tools">Tools</a>
+              <a href="?destination=about">About</a>
+              <a href="?destination=base">Base</a>
+              <a href="?destination=blog">Blog</a>
+              <a href="?destination=contact">Contact</a>
+              <a href="?destination=custom">Custom</a>
+              <a href="?destination=support">Support</a>
+              <a href="?destination=tools">Tools</a>
             </div>
           </div>
           <label for="hours">Hours:</label>
@@ -47,7 +47,7 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <label for="mins">Minutes:</label>
+          <label for="mins">Minutes:</label>
            <select name="mins" id="mins">
               <option value="0">0</option>
               <option value="10">10</option>
@@ -55,6 +55,11 @@
               <option value="30">30</option>
               <option value="40">40</option>
               <option value="50">50</option>
+            </select>
+          <label for="time">AM or PM:</label>
+           <select name="time" id="time">
+              <option value="am">AM</option>
+              <option value="pm">PM</option>
             </select>
         </div>
       </div>
