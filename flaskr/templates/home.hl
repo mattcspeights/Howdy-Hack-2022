@@ -26,6 +26,8 @@
 			<input type="text" id="email" name="email" placeholder="john.doe@email.com"><br>
 			<label for="email">Address:</label><br>
 			<input type="text" id="address" name="address" placeholder="123 Hello World Ln"><br><br>
+			<label for="text">Password:</label><br>
+			<input type="text" id="pword" name="pword" placeholder="password123"><br><br>
 			<button id = "signup">Submit</button>
 		  </form> 
 		</div>
@@ -35,10 +37,10 @@
         <div class = "card">
           <h2>Sign-In</h2>
           <form method = "post">
-		    <label for="fname">Username:</label><br>
-		    <input type="text" id="uname" name="uname" placeholder="John"><br>
-		    <label for="pword">Password:</label><br>
-		    <input type="password" id="pword" name="pword" placeholder="Doe"><br><br>
+		    <label for="unamesi">Username:</label><br>
+		    <input type="text" id="unamesi" name="unamesi" placeholder="John"><br>
+		    <label for="pwordsi">Password:</label><br>
+		    <input type="password" id="pwordsi" name="pwordsi" placeholder="Doe"><br><br>
 		    <button id = "signin">Submit</button>
 		  </form>
         </div>
