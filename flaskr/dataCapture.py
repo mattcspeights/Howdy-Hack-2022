@@ -45,13 +45,16 @@ def checkPass(df, username, password):
         return -1
     
 def addUserInfo(userData, username, email, password, origin):
-    userData.loc[len(userData.index)] = [username, email, hashPass(password), 0, origin, "", []]
+    userData.loc[len(userData.index)] = [username, email, hashPass(password), 0, origin, ["","","",""], []]
 
 def modifySeats(df, username, seats):
     df.loc[findUserIndex(df,username), "Seats"] = seats
 
-def modifyDestination(df, username, destination):
-    df.loc[findUserIndex(df,username), "Destination"] = destination
+def modifyDestination(df, username, destination, hour, mins, ampm):
+    df.loc[findUserIndex(df,username), "Destination"][0] = destination
+    df.loc[findUserIndex(df,username), "Destination"][1] = hour
+    df.loc[findUserIndex(df,username), "Destination"][2] = mins
+    df.loc[findUserIndex(df,username), "Destination"][3] = ampm
 
 def modifyPassengers(df, username, passengers):
     df.loc[findUserIndex(df,username), "Passengers"].append(passengers)

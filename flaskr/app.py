@@ -31,20 +31,19 @@ def base():
 def LoggedIn():
     UserName = ""
     if request.method == "POST":
+        df = dc.readUserData('userData.pkl')
         #get data from drop down menues
         UserName = request.args.get("username")
-        print(UserName)
         destination = request.args.get("destination")
-        print(destination)
         hours = request.form.get("hours")
         print(hours)
         mins = request.form.get("mins")
         print(mins)
         ampm = request.form.get("time")
         print(ampm)
-        
-        df = dc.readUserData('userData.pkl')
-        match.matchUsers(df, UserName)
+        dc.modifyDestination(df, UserName, destination, hours, mins, ampm)
+        print(df)
+        #print(match.matchUsers(df, UserName))
 
     
 
