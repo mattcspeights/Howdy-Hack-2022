@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head style = "padding-top:40px;">
-    <title>RevRides Home Page</title>
+    <title>Rev's Rides</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
     <div class = "pagination">
       <a href="{{url_for('base')}}{{loginInfo}}" class = "active">Home</a>
-      <a href="{{url_for('about')}}{{loginInfo}}">About</a>
-      <a href="{{url_for('loggedIn')}}{{loginInfo}}">Edit Destination</a>
       <a href="{{url_for('matches')}}{{loginInfo}}">Match!</a>
+      <a href="{{url_for('loggedIn')}}{{loginInfo}}">Edit Destination</a>
+      <a href="{{url_for('about')}}{{loginInfo}}">About</a>
     </div>
 	
 	<hr id = "hr0">
