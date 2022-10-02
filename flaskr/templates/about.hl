@@ -16,7 +16,7 @@
     <div class="bio-row">
       
       <div class ="bio-column">
-        <div class = "card">
+        <div class = "bio-card">
           <p>
             <b>Augene Chung</b>
           </p>
@@ -28,7 +28,7 @@
       </div>
       
       <div class = "bio-column">
-        <div class = "card">
+        <div class = "bio-card">
           <p>
             <b><h2>Killian Crittenden</h2></b>
             <br>
@@ -41,7 +41,7 @@
       </div>
 
       <div class = "bio-column">
-        <div class = "card">
+        <div class = "bio-card">
           <p>
             <b>Matthew Speights</b>
             <br>
@@ -54,7 +54,7 @@
       </div>
 
       <div class = "bio-column">
-        <div class = "card">
+        <div class = "bio-card">
           <p>
             <b>Aadith Thiruvallarai</b>
             <br>
