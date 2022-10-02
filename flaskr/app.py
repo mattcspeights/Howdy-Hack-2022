@@ -59,7 +59,7 @@ def SignUp():
         #request the elements from the webpage
         UserEmail = request.form.get("email")
         UserAddress = request.form.get("address")
-        Username = request.form.get("fname")
+        Username = request.form.get("uname")
         UserPass = request.form.get("pword")
         #validate username
         if dc.inDf(df, Username):
