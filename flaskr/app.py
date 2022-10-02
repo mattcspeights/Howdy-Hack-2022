@@ -46,6 +46,8 @@ def LoggedIn():
         df = dc.readUserData('userData.pkl')
         match.matchUsers(df, UserName)
 
+        return redirect(url_for('matches'))
+
     
 
     return render_template("loggedIn.hl")
@@ -75,6 +77,11 @@ def SignUp():
     else:
         return render_template("signUp.hl")
 
+@bp.route('/matches')
+def matches():
+
+    return render_template('matches.hl')
+
 @bp.route('/about')
 def about():
 
@@ -86,3 +93,4 @@ app.add_url_rule('/', endpoint='base')
 app.add_url_rule('/about', endpoint = 'about')
 app.add_url_rule('/loggedIn', endpoint='loggedIn')
 app.add_url_rule('/signUp', endpoint='signUp')
+app.add_url_rule('/matches', endpoint='matches')
