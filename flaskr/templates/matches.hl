@@ -6,8 +6,10 @@
   </head>
   <body>
     <div class = "pagination">
-      <a href="{{url_for('base')}}" class = "active">home</a>
-	  <a href="{{url_for('about')}}">about</a>
+        <a href="{{url_for('base')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('loggedIn')}}">Edit Destination</a>
+        <a href="{{url_for('matches')}}" class = "active">Match!</a>
     </div>
 	<hr id = "hr0">
 	<h1 id =  "title">Rider Plan
@@ -15,27 +17,31 @@
   </h1>
   <div class="matchcard">
     <form method="post">
-        <button class="dropbtn">Let's Ride!</button>
-        <table class="table-striped-bordered">
-            <tr>
+        <button class="dropbtn" onclick="onClick()">Let's Ride!</button>
+        <table id="matchTable" style="display:none;" class="matchTable">
+            <tr id="matchTable" class="matchTable">
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
                 <th>Destination</th>
                 <th>Time</th>
-            </tr>
+            </tr class="matchTable">
             {% for rider in riderList %}
             <tr>
-              <td>{{ rider['Username'] }}</td>
-              <td>{{ rider['Email'] }}</td>
-              <td>{{ rider['Origin'] }}</td>
-              <td>{{ rider['Destination'][0] }}</td>
-              <td>{{ rider['Destination'][1] }}:{{ rider['Destination'][2] }} {{ rider['Destination'][3] }}</td>
+              <td class="matchTable">{{ rider['Username'] }}</td>
+              <td class="matchTable">{{ rider['Email'] }}</td>
+              <td class="matchTable">{{ rider['Origin'] }}</td>
+              <td class="matchTable">{{ rider['Destination'][0] }}</td>
+              <td class="matchTable">{{ rider['Destination'][1] }}:{{ rider['Destination'][2] }} {{ rider['Destination'][3] }}</td>
             </tr>
             {% endfor %}
           </table>
     </form>
   </div>
+  <script>
+    document.getElementById("matchTable").style.display = sessionStorage.getItem("display");
+  </script>
+  <script src="../static/script.js"></script>
   </body>
 </html>
 

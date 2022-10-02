@@ -2,6 +2,7 @@
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
+    sessionStorage.setItem("display", "none");
   }
   
   function filterFunction() {
@@ -19,3 +20,13 @@ function myFunction() {
       }
     }
   }
+
+function onClick(){
+  if (sessionStorage.getItem("display") != "block"){
+    sessionStorage.setItem("display", "block");
+  }
+  else{
+    sessionStorage.setItem("display", "none");
+  }
+  document.getElementById("matchTable").style.display = sessionStorage.getItem("display");
+}

@@ -6,8 +6,10 @@
   </head>
   <body>
     <div class = "pagination">
-      <a href="{{url_for('base')}}" class = "active">home</a>
-	    <a href="{{url_for('about')}}">about</a>
+      <a href="{{url_for('base')}}">Home</a>
+      <a href="{{url_for('about')}}">About</a>
+      <a href="{{url_for('loggedIn')}}" class = "active">Edit Destination</a>
+      <a href="{{url_for('matches')}}">Match!</a>
     </div>
     
     <hr id = "hr0">

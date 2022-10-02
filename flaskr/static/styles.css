@@ -216,3 +216,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.matchTable {
+	border: 1px;
+	border-style: solid;
+  	border-color:  #800000;
+}
