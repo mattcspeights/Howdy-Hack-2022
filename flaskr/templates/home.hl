@@ -12,8 +12,9 @@
 	
 	<hr id = "hr0">
 	<h1 id =  "title">Welcome to Rev Match!</h1>
+	
+  <div class="row">
 	<!--
-    <div class="row">
       <div class ="column" id="su">
         <div class = "card">
 		  <h2>Sign-Up</h2>
@@ -31,22 +32,19 @@
 		</div>
       </div>
       -->
-      <div class = "center">
-		<div class = "column" id="si">
+    <div class = "column" id="si">
 		  <div class = "card">
 		  <h2>Sign-In</h2>
-			<form method = "post">
-		      <label for="fname">Username:</label><br>
-			  <input type="text" id="uname" name="uname" placeholder="john.doe"><br>
+		  <form method = "post">
+		    <label for="fname">Username:</label><br>
+		    <input type="text" id="uname" name="uname" placeholder="john.doe"><br>
 			  <label for="pword">Password:</label><br>
 			  <input type="password" id="pword" name="pword" placeholder="password"><br><br>
 			  <button id = "signin">Submit</button><br>
-		      <a href = "{{url_for('signUp')}}">Not Registered? Create Account</a>
+		    <a href = "{{url_for('signUp')}}">Not Registered? Create Account</a>
 			</form>
-		  </div>
 		</div>
-	  </div>
-    </div>
+  </div>
 	<script src="../static/script.js"></script>
   </body>
 </html>
