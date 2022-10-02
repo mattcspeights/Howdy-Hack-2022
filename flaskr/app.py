@@ -1,34 +1,32 @@
+from crypt import methods
 import email
-from urllib import request
 from xml.dom.minidom import Document
-from flask import render_template, Blueprint, Flask
+from flask import render_template, Blueprint, Flask, request
 import dataCapture as dc
 import pandas as pd
 bp = Blueprint('main', __name__)
 
-@bp.route('/')
+@bp.route('/', methods=['POST', 'GET'])
 def base():
-
+    if request.method == "POST":
+        email = request.form.get("email")
+        print(email)
     return render_template("home.hl")
 
-@bp.route('/home')
+@bp.route('/home', methods=['POST', 'GET'])
 def home():
 
     return render_template("home.hl")
 
-@bp.route('/loggedIn')
+@bp.route('/loggedIn', methods=['POST'])
 def LoggedIn():
 
     return render_template("loggedIn.hl")
 
-@bp.route('/signUp')
+@bp.route('/signUp', methods=['POST'])
 def SignUp():
-    if request.method == "POST":
-        df = dc.readUserData("userData.pkl")
-        request.form.get(email)
 
-
-    return render_template("signUp.hl")
+    return render_template("home.hl")
 
 @bp.route('/about')
 def about():
