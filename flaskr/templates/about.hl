@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to our website</title>
+    <title>Rev's Rides</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
@@ -13,7 +13,7 @@
     </div>
 	
 	<hr id = "hr0">
-	<h1 id =  "title">Rev Match!</h1>
+	<h1 id =  "title">About Us</h1>
 
     <div class="bio-row">
       
