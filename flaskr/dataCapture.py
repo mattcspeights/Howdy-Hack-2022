@@ -41,6 +41,8 @@ def checkPass(df, username, password):
         return -1
     if getPassword(df, findUserIndex(df, username)) == hashPass(password):
         return 1
+    else:
+        return -1
     
 def addUserInfo(userData, username, email, password, origin):
     userData.loc[len(userData.index)] = [username, email, hashPass(password), 0, origin, "", []]
