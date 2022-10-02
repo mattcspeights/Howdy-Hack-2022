@@ -69,7 +69,7 @@ def readUserData(filename):
 def writeUserData(df, filename):
     df.to_pickle(filename)
 
-#df = readUserData("userData.pkl")
+df = readUserData("userData.pkl")
 
 #addUserInfo(df, "killian", "killian@gmail.com", "Password", "Your moms house")
 
@@ -77,7 +77,7 @@ def writeUserData(df, filename):
 #modifyDestination(df, "killian", "Your dads house")
 #modifyPassengers(df, "killian", ["evan", "tyler"])
 
-#print(df)
+print(df)
 
 #df = pd.DataFrame(columns=['User Name', 'Email', 'Password', 'Seats', 'Origin', 'Destination', 'Passengers'])
 
