@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head style = "padding-top:40px;">
+    <title>RevRides Matches</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
+  </head>
+  <body>
+    <div class = "pagination">
+      <a href="{{url_for('base')}}" class = "active">home</a>
+	  <a href="{{url_for('about')}}">about</a>
+    </div>
+	<hr id = "hr0">
+	<h1 id =  "title">Let's Ride!
+    <img class = "socials-img" src = "../static/reveille.svg">
+  </h1>
+  <table>
+    <th></th>
+  </table>
+  </body>
+</html>
+

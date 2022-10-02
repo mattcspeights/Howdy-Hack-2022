@@ -18,4 +18,5 @@ function myFunction() {
         a[i].style.display = "none";
       }
     }
+    getElementById("destinationChoice").innerText=input
   }
