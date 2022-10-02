@@ -18,7 +18,7 @@ def base():
         UserPass = request.form.get("pword")
         
         #validate username
-        if dc.checkPass(df, Username, UserPass):
+        if dc.checkPass(df, Username, UserPass) == 1:
             print("valid")
             return redirect(url_for('loggedIn') + f'?username={Username}')
         else:
@@ -45,11 +45,11 @@ def LoggedIn():
         print(df)
         #print(match.matchUsers(df, UserName))
 
-        return redirect(url_for('matches'))
+        return redirect(url_for('matches') + f"?username={UserName}")
 
     
 
-    return render_template("loggedIn.hl")
+    return render_template("loggedIn.hl", UserName=request.args.get("username"))
 
 @bp.route('/signUp', methods=['POST', 'GET'])
 def SignUp():
@@ -72,12 +72,17 @@ def SignUp():
             #write new data into file
             dc.writeUserData(df, "userData.pkl")
             return redirect(url_for('base'))
-            # return render_template("home.hl")
     else:
         return render_template("signUp.hl")
 
-@bp.route('/matches')
+@bp.route('/matches', methods=['POST', 'GET'])
 def matches():
+    if request.method == 'POST':
+        df = dc.readUserData('userData.pkl')
+        UserName = request.args.get('username')
+        userList = match.matchUsers(df, UserName)
+
+        return render_template('matches.hl', riderList=userList)
 
     return render_template('matches.hl')
 

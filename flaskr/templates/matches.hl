@@ -10,12 +10,21 @@
 	  <a href="{{url_for('about')}}">about</a>
     </div>
 	<hr id = "hr0">
-	<h1 id =  "title">Let's Ride!
+	<h1 id =  "title">Rider Plan
     <img class = "socials-img" src = "../static/reveille.svg">
   </h1>
-  <table>
-    <th></th>
-  </table>
+  <div class="matchcard">
+    <form method="post">
+        <button class="dropbtn">Let's Ride!</button>
+        <table class="table-striped-bordered">
+            <th>Riders</th>
+            {% for rider in riderList %}
+            <td>{{ rider['Username'] }} {{ rider['Email'] }} {{ rider['Origin'] }} {{ rider['Destination'][0] }} at
+                 {{ rider['Destination'][1] }}:{{ rider['Destination'][2] }} {{ rider['Destination'][3] }}</td>
+            {% endfor %}
+        </table>
+    </form>
+  </div>
   </body>
 </html>
 
