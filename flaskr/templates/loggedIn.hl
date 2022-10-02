@@ -16,15 +16,22 @@
     <div class="row">
       <div class = "column" id="li">
         <div class = "card">
-        <h2>Where will you be going?</h2>
-          <form method = "post">
-            <label for="origin">Origin:</label><br>
-            <input type="text" id="origin" name="origin" placeholder="place123"><br>
-            <label for="destination">Destination:</label><br>
-            <input type="text" id="destination" name="destinaion" placeholder="destination"><br><br>
-            <button id = "tempname">Submit</button>
-          </form>
+        <div class="dropdown">
+          <h2>Where will you be going?</h2>
+          <button onclick="myFunction()" class="dropbtn">Location</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <a href="#about">About</a>
+              <a href="#base">Base</a>
+              <a href="#blog">Blog</a>
+              <a href="#contact">Contact</a>
+              <a href="#custom">Custom</a>
+              <a href="#support">Support</a>
+              <a href="#tools">Tools</a>
+            </div>
+          </div>
         </div>
       </div>
+      <script src="../static/script.js"></script>
   </body>
 </html>
