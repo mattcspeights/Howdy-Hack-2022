@@ -25,7 +25,7 @@ def base():
         else:
             #take collected info and add a new user
             dc.addUserInfo(df, Username, UserEmail, UserPass, UserAddress)
-            print(df)
+            return render_template("sign.hl")
         #write new data into file
         dc.writeUserData(df, "userData.pkl")
 
