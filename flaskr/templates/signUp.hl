@@ -5,7 +5,9 @@
   </head>
   <body>
     <div>
-      <p>BaWls</p>
+      {% if userExists %}
+			<b>Username Taken</b>
+			{% endif %}
 
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
 
