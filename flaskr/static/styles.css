@@ -65,6 +65,12 @@ body {
 	/*margin-left: 90px;*/
 }
 
+.bio-column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
 /* removes extra margins */
 .row {
 	/*margin: 0 -5px;*/
@@ -73,6 +79,11 @@ body {
 	width: 100%;
 	/*padding: 10px;*/
 	
+}
+
+.bio-row {
+	margin: auto;
+	width: 100%;
 }
 
 /* clear floats after the columns */

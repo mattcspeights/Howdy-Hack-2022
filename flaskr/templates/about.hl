@@ -13,20 +13,21 @@
 	<hr id = "hr0">
 	<h1 id =  "title">Rev Match!</h1>
 
-    <div class="row">
-      <div class ="column">
+    <div class="bio-row">
+      
+      <div class ="bio-column">
         <div class = "card">
-        <p>
-          <b>Augene Chung</b>
-        </p>
-        <p>
-        I'm a freshman General Engineering student, aspiring to be a Computer Science student, at Texas A&M and 
-        this is my first hackathon! I really enjoy playing the guitar and messing around with friends.
-        </p>
-      </div>
+          <p>
+            <b>Augene Chung</b>
+          </p>
+          <p>
+            I'm a freshman General Engineering student, aspiring to be a Computer Science student, at Texas A&M and 
+            this is my first hackathon! I really enjoy playing the guitar and messing around with friends.
+          </p>
+        </div>
       </div>
       
-      <div class = "column">
+      <div class = "bio-column">
         <div class = "card">
           <p>
             <b>Killian Crittenden</b>
@@ -39,7 +40,7 @@
         </div>
       </div>
 
-      <div class = "column">
+      <div class = "bio-column">
         <div class = "card">
           <p>
             <b>Matthew Speights</b>
@@ -52,7 +53,7 @@
         </div>
       </div>
 
-      <div class = "column">
+      <div class = "bio-column">
         <div class = "card">
           <p>
             <b>Aadith Thiruvallarai</b>
