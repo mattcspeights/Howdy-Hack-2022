@@ -8,8 +8,13 @@ def matchUsers(df, username):
 
     for i in range(len(df.index)):
         if df.iloc[i]["User Name"] != username and df.iloc[i]["Destination"] == destination:
-            matchedUsers.append(df.iloc[i])
+            tempdf = df.iloc[i]
+            matchedUsers.append({'Username' : tempdf["User Name"],
+            'Email' : tempdf["Email"], 
+            'Origin' : tempdf["Origin"],
+            'Destination' : tempdf["Destination"]})
 
+#email, destination, origin, username
     return matchedUsers
 
 testFrame = dc.readUserData("userData.pkl")

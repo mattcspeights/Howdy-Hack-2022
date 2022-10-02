@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head style = "padding-top:10px;">
+  <head style = "padding-top:40px;">
     <title>RevRides Home Page</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
@@ -11,7 +11,7 @@
     </div>
 	
 	<hr id = "hr0">
-	<h1 id =  "title">Welcome to Rev Match!
+	<h1 id =  "title">Welcome to Rev's Rides!
     <img class = "socials-img" src = "../static/reveille.svg">
   </h1>
 
