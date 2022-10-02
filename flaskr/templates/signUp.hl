@@ -2,16 +2,38 @@
 <html>
   <head>
     <title>Welcome to our website</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
-    <div>
-      <p>BaWls</p>
-
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
-
-      <img src="{{url_for('static', filename='cursedclub.jpg')}}">
-
-      <img src="{{url_for('static', filename='giphy.gif')}}">
+    <div class = "pagination">
+      <a href="{{url_for('home')}}" class = "active">home</a>
+	  <a href="{{url_for('about')}}">about</a>
     </div>
-  </body>
+	
+	<hr id = "hr0">
+	<h1 id =  "title">Welcome to Rev Match!</h1>
+  <div class="row">
+    
+    <div class ="column" id="su">
+      <div class = "card">
+		    <h2>Sign-Up</h2>
+		    <form method = "post">
+			    <label for="fname">First name:</label><br>
+			    <input type="text" id="fname" name="fname" placeholder="John"><br>
+			    <label for="lname">Last name:</label><br>
+			    <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+			    <label for="email">Email:</label><br>
+			    <input type="text" id="email" name="email" placeholder="john.doe@email.com"><br>
+			    <label for="email">Address:</label><br>
+			    <input type="text" id="address" name="address" placeholder="123 Hello World Ln"><br><br>
+			    <button id = "signup">Submit</button>
+		    </form> 
+		  </div>
+    </div>
+      
+
+  </div>
+	<script src="../static/script.js"></script>
+</body>
 </html>
+
