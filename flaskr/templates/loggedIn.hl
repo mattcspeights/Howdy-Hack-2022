@@ -2,16 +2,29 @@
 <html>
   <head>
     <title>Welcome to our website</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
   </head>
   <body>
-    <div>
-      <p>BaWls</p>
-
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click The Link</a>
-
-      <img src="{{url_for('static', filename='cursedclub.jpg')}}">
-
-      <img src="{{url_for('static', filename='giphy.gif')}}">
+    <div class = "pagination">
+      <a href="{{url_for('base')}}" class = "active">home</a>
+	    <a href="{{url_for('about')}}">about</a>
     </div>
+    <hr id = "hr0">
+    <div>
+      <h1>Welcome name to RevMatch!</h1>
+    </div>
+    <div class="row">
+      <div class = "column" id="li">
+        <div class = "card">
+        <h2>Where will you be going?</h2>
+          <form method = "post">
+            <label for="origin">Origin:</label><br>
+            <input type="text" id="origin" name="origin" placeholder="place123"><br>
+            <label for="destination">Destination:</label><br>
+            <input type="text" id="destination" name="destinaion" placeholder="destination"><br><br>
+            <button id = "tempname">Submit</button>
+          </form>
+        </div>
+      </div>
   </body>
 </html>
