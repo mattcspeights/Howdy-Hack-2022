@@ -65,6 +65,12 @@ body {
 	/*margin-left: 90px;*/
 }
 
+.bio-column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
 /* removes extra margins */
 .row {
 	/*margin: 0 -5px;*/
@@ -75,6 +81,11 @@ body {
 	
 }
 
+.bio-row {
+	margin: auto;
+	width: 100%;
+}
+
 /* clear floats after the columns */
 .row:after {
 	content: "";
@@ -83,6 +94,14 @@ body {
 }
 
 /* styles the counter cards */
+.bio-card {
+	text-align: left;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* card effect */
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
 .card {
 	display: flex;
   	justify-content: center;
