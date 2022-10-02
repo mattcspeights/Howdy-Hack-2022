@@ -3,6 +3,7 @@ import email
 from xml.dom.minidom import Document
 from flask import render_template, Blueprint, Flask, request, url_for, redirect
 import dataCapture as dc
+import matchUsers as match
 import pandas as pd
 import requests as http
 
@@ -19,7 +20,7 @@ def base():
         #validate username
         if dc.checkPass(df, Username, UserPass):
             print("valid")
-            return redirect(url_for('loggedIn'))
+            return redirect(url_for('loggedIn') + f'?username={Username}')
         else:
             print("not valid")
             return redirect(url_for('base'))
@@ -28,6 +29,25 @@ def base():
 
 @bp.route('/loggedIn', methods=['POST', 'GET'])
 def LoggedIn():
+    UserName = ""
+    if request.method == "POST":
+        #get data from drop down menues
+        UserName = request.args.get("username")
+        print(UserName)
+        destination = request.args.get("destination")
+        print(destination)
+        hours = request.form.get("hours")
+        print(hours)
+        mins = request.form.get("mins")
+        print(mins)
+        ampm = request.form.get("time")
+        print(ampm)
+        
+        df = dc.readUserData('userData.pkl')
+        match.matchUsers(df, UserName)
+
+    
+
     return render_template("loggedIn.hl")
 
 @bp.route('/signUp', methods=['POST', 'GET'])
