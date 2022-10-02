@@ -18,7 +18,8 @@
       <div class ="bio-column">
         <div class = "bio-card">
           <p>
-            <b>Augene Chung</b>
+            <b><h3>Augene Chung</h3></b>
+            <br>
           </p>
           <p>
             I'm a freshman General Engineering student, aspiring to be a Computer Science student, at Texas A&M and 
@@ -30,7 +31,7 @@
       <div class = "bio-column">
         <div class = "bio-card">
           <p>
-            <b><h2>Killian Crittenden</h2></b>
+            <b><h3>Killian Crittenden</h3></b>
             <br>
           </p>
           <p>
@@ -43,7 +44,7 @@
       <div class = "bio-column">
         <div class = "bio-card">
           <p>
-            <b>Matthew Speights</b>
+            <b><h3>Matthew Speights</h3></b>
             <br>
           </p>
           <p>
@@ -56,7 +57,7 @@
       <div class = "bio-column">
         <div class = "bio-card">
           <p>
-            <b>Aadith Thiruvallarai</b>
+            <b><h3>Aadith Thiruvallarai</h3></b>
             <br>
           </p>
           <p>
