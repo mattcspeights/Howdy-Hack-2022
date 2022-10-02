@@ -9,7 +9,7 @@
       <a href="{{url_for('base')}}{{loginInfo}}">Home</a>
       <a href="{{url_for('matches')}}{{loginInfo}}">Match!</a>
       <a href="{{url_for('loggedIn')}}{{loginInfo}}">Edit Destination</a>
-      <a href="{{url_for('about')}}{{loginInfo}}" class = "active">About</a>
+      <a href="{{url_for('about')}}{{loginInfo}}" class = "active">Authors</a>
     </div>
 	
 	<hr id = "hr0">
@@ -54,7 +54,7 @@
           <img class = "bio-images" src = "../static/matthew.JPG">
           <p>
           I'm a sophomore Computer Science student at Texas A&M University, and this is my first hackathon! 
-          As I always like to say, "bro I'm always on the flipping grind".
+          I love to play comptetive sports and learn new things!
           </p>
         </div>
       </div>
