@@ -17,22 +17,22 @@
     </div>
     <div class = "column" id="li">
       <div class = "card">
+        <div class="dropdown">
+          <h2>Destination</h2>
+          <button onclick="myFunction()" class="dropbtn">Location</button>
+          <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="?destination=about">About</a>
+            <a href="?destination=base">Base</a>
+            <a href="?destination=blog">Blog</a>
+            <a href="?destination=contact">Contact</a>
+            <a href="?destination=custom">Custom</a>
+            <a href="?destination=support">Support</a>
+            <a href="?destination=tools">Tools</a>
+            <br>
+          </div>
+        </div>
           <form method="post">
-            <div class="dropdown">
-              <h2>Destination</h2>
-              <button onclick="myFunction()" class="dropbtn">Location</button>
-              <div id="myDropdown" class="dropdown-content">
-                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                <a href="?destination=about">About</a>
-                <a href="?destination=base">Base</a>
-                <a href="?destination=blog">Blog</a>
-                <a href="?destination=contact">Contact</a>
-                <a href="?destination=custom">Custom</a>
-                <a href="?destination=support">Support</a>
-                <a href="?destination=tools">Tools</a>
-                <br>
-              </div>
-            </div>
             <label for="origin"><h2>Origin:</h2></label>
 				    <input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
             <label for="hours"><h2>Hours</h2></label>

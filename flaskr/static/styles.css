@@ -151,7 +151,7 @@ body {
 #myInput:focus {outline: 3px solid #ddd;}
 
 .dropdown {
-  position: relative;
+  position: top;
   display: inline-block;
 }
 
