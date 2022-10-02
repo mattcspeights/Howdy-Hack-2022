@@ -23,6 +23,7 @@
             <b><h3>Augene Chung</h3></b>
             <br>
           </p>
+          <img src = "../static/augene.jpg">
           <p>
             I'm a freshman General Engineering student, aspiring to be a Computer Science student, at Texas A&M and 
             this is my first hackathon! I really enjoy playing the guitar and messing around with friends.
@@ -36,6 +37,7 @@
             <b><h3>Killian Crittenden</h3></b>
             <br>
           </p>
+          <img src = "../static/killian.jpg">
           <p>
           I'm a sophomore Computer Engineering student at Texas A&M University, and this is my second hackathon! I'm a Student Analyst
           for the Texas A&M Technology Services.
@@ -49,6 +51,7 @@
             <b><h3>Matthew Speights</h3></b>
             <br>
           </p>
+          <img src = "../static/matthew.JPG">
           <p>
           I'm a sophomore Computer Science student at Texas A&M University, and this is my first hackathon! 
           As I always like to say, "bro I'm always on the flipping grind".
@@ -62,6 +65,7 @@
             <b><h3>Aadith Thiruvallarai</h3></b>
             <br>
           </p>
+          <img src = "aadit"
           <p>
           I'm a junior Computer Science student at Texas A&M University, and this is my second hackathon! I enjoy reading and hanging
           out with dogs and cats.
