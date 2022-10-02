@@ -5,7 +5,6 @@ from flask import render_template, Blueprint, Flask, request, url_for, redirect
 import dataCapture as dc
 import matchUsers as match
 import pandas as pd
-import requests as http
 
 loginInfo = ''
 
@@ -88,7 +87,7 @@ def matches():
 
         return render_template('matches.hl', loginInfo=loginInfo, riderList=userList)
 
-    return render_template('matches', loginInfo=loginInfo)
+    return render_template('matches.hl', loginInfo=loginInfo)
 
 @bp.route('/about')
 def about():
