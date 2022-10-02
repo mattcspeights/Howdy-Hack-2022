@@ -9,11 +9,12 @@
       <a href="{{url_for('base')}}" class = "active">home</a>
 	    <a href="{{url_for('about')}}">about</a>
     </div>
+    
     <hr id = "hr0">
-    <div>
+    
+    <div id = "personal-welcome">
       <h1>Welcome name to RevMatch!</h1>
     </div>
-    <div class="row">
       <div class = "column" id="li">
         <div class = "card">
           <label for="origin">Origin:</label><br>
