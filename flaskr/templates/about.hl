@@ -65,10 +65,10 @@
             <b><h3>Aadith Thiruvallarai</h3></b>
             <br>
           </p>
-          <img src = "aadit"
+          <img src = "../static/aadith.jpg">
           <p>
           I'm a junior Computer Science student at Texas A&M University, and this is my second hackathon! I enjoy reading and hanging
-          out with dogs and cats.
+          out with dogs and cats. Can I get a "ruff"?
           </p>
         </div>
       </div>
