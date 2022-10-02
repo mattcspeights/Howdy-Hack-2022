@@ -223,25 +223,7 @@ body {
   	border-color:  #800000;
 }
 
-#augene {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
-
-#killian {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
-
-#matthew {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
-
-#aadith {
+.bio-images {
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
