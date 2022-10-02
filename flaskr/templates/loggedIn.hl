@@ -13,12 +13,12 @@
     <hr id = "hr0">
     
     <div id = "personal-welcome">
-      <h1>Welcome name to RevMatch!</h1>
+       <h1>Welcome name to RevMatch!</h1>
     </div>
-      <div class = "column" id="li">
-        <div class = "card">
-          <label for="origin">Origin:</label><br>
-				  <input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
+    <div class = "column" id="li">
+      <div class = "ride-finder-card">
+        <label for="origin"><h2>Origin:</h2></label><br>
+				<input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
         <div class="dropdown">
           <h2>Where will you be going?</h2>
           <button onclick="myFunction()" class="dropbtn">Location</button>
