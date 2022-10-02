@@ -34,5 +34,3 @@ app.add_url_rule('/home', endpoint='home')
 app.add_url_rule('/about', endpoint = 'about')
 app.add_url_rule('/loggedIn', endpoint='loggedIn')
 app.add_url_rule('/signUp', endpoint='signUp')
-
-print("oofing")
