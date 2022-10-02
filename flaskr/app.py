@@ -10,8 +10,25 @@ bp = Blueprint('main', __name__)
 @bp.route('/', methods=['POST', 'GET'])
 def base():
     if request.method == "POST":
-        email = request.form.get("email")
-        print(email)
+        print("Bawls")
+        df = dc.readUserData("userData.pkl")
+        #request the elements from the webpage
+        UserEmail = request.form.get("email")
+
+        UserAddress = request.form.get("address")
+        Username = request.form.get("fname")
+        UserPass = request.form.get("pword")
+        
+        #validate username
+        if dc.inDf(df, Username):
+            pass
+        else:
+            #take collected info and add a new user
+            dc.addUserInfo(df, Username, UserEmail, UserPass, UserAddress)
+            print(df)
+        #write new data into file
+        dc.writeUserData(df, "userData.pkl")
+
     return render_template("home.hl")
 
 @bp.route('/home', methods=['POST', 'GET'])
@@ -37,11 +54,12 @@ def LoggedIn():
 @bp.route('/signUp', methods=['POST'])
 def SignUp():
     if request.method == "POST":
+        print("signup")
         df = dc.readUserData("userData.pkl")
         #request the elements from the webpage
         UserEmail = request.form.get("email")
         UserAddress = request.form.get("address")
-        Username = request.form.get("uname")
+        Username = request.form.get("fname")
         UserPass = request.form.get("pword")
         #validate username
         if dc.inDf(df, Username):
