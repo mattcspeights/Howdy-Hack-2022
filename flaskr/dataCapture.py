@@ -19,6 +19,8 @@ def hashPass(password):
     return hashedPass
 
 def findUserIndex(df, username):
+    if len(df[df["User Name"] == username].index.values) == 0:
+        return 0
     return df[df["User Name"] == username].index.values[0]
 
 def inDf(df, username):
@@ -55,6 +57,7 @@ def modifyDestination(df, username, destination, hour, mins, ampm):
     df.loc[findUserIndex(df,username), "Destination"][1] = hour
     df.loc[findUserIndex(df,username), "Destination"][2] = mins
     df.loc[findUserIndex(df,username), "Destination"][3] = ampm
+    writeUserData(df, 'userData.pkl')
 
 def modifyPassengers(df, username, passengers):
     df.loc[findUserIndex(df,username), "Passengers"].append(passengers)
@@ -66,7 +69,7 @@ def readUserData(filename):
 def writeUserData(df, filename):
     df.to_pickle(filename)
 
-#df = readUserData("userData.pkl")
+# df = readUserData("userData.pkl")
 
 #addUserInfo(df, "killian", "killian@gmail.com", "Password", "Your moms house")
 
@@ -74,8 +77,10 @@ def writeUserData(df, filename):
 #modifyDestination(df, "killian", "Your dads house")
 #modifyPassengers(df, "killian", ["evan", "tyler"])
 
-#print(df)
+# print(df)
 
-#df = pd.DataFrame(columns=['User Name', 'Email', 'Password', 'Seats', 'Origin', 'Destination', 'Passengers'])
+# df = pd.DataFrame(columns=['User Name', 'Email', 'Password', 'Seats', 'Origin', 'Destination', 'Passengers'])
 
-#writeUserData(df, "userData.pkl")
+# writeUserData(df, "userData.pkl")
+
+# print(df)
