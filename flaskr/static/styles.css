@@ -4,6 +4,10 @@ hr {
 	border: none;
 }
 
+h1 {
+	text-align: center
+}
+
 h2 {
 	text-align: center
 }
@@ -46,11 +50,17 @@ body {
 	box-sizing: border-box;
 }
 
+.center {
+	margin: auto;
+	width: 100%;
+}
+
 /* allows columns to float next to each other */
 .column {
 	float: left;
 	width: 25%;
 	padding: 0 10px;
+	/*margin-left: 90px;*/
 }
 
 /* removes extra margins */
