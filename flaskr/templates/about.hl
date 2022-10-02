@@ -7,7 +7,7 @@
   <body>
     <div class = "pagination">
       <a href="{{url_for('home')}}">home</a>
-	    <a href="{{url_for('about')}}">about</a>
+	    <a href="{{url_for('about')}}" class = "active">about</a>
     </div>
 	
 	<hr id = "hr0">
