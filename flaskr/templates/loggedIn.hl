@@ -22,13 +22,14 @@
           <button onclick="myFunction()" class="dropbtn">Location</button>
           <div id="myDropdown" class="dropdown-content">
             <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-            <a href="?destination=about">About</a>
-            <a href="?destination=base">Base</a>
-            <a href="?destination=blog">Blog</a>
-            <a href="?destination=contact">Contact</a>
-            <a href="?destination=custom">Custom</a>
-            <a href="?destination=support">Support</a>
-            <a href="?destination=tools">Tools</a>
+            <a href="?destination=wcg">West Campus Garage</a>
+            <a href="?destination=ssg">South Side Garage</a>
+            <a href="?destination=ucg">University Campus Garage</a>
+            <a href="?destination=ccg">Central Campus Garage</a>
+            <a href="?destination=nsg">North Side Garage</a>
+            <a href="?destination=sbg">Gene Stallings Blvd. Garage</a>
+            <a href="?destination=prg">Polo Road Garage</a>
+            <p id="destinationChoice"></p>
             <br>
           </div>
         </div>
@@ -53,7 +54,7 @@
             <br>
             <label for="mins">Minutes:</label>
             <select name="mins" id="mins">
-              <option value="0">0</option>
+              <option value="0">00</option>
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="30">30</option>
