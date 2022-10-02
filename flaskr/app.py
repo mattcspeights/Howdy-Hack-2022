@@ -1,7 +1,7 @@
 from crypt import methods
 import email
 from xml.dom.minidom import Document
-from flask import render_template, Blueprint, Flask, request, url_for
+from flask import render_template, Blueprint, Flask, request, url_for, redirect
 import dataCapture as dc
 import pandas as pd
 import requests as http
@@ -19,7 +19,7 @@ def base():
         #validate username
         if dc.checkPass(df, Username, UserPass):
             print("valid")
-            return render_template("loggedIn.hl")
+            return redirect(url_for('loggedIn'))
         else:
             print("not valid")
             return render_template("home.hl")
@@ -55,8 +55,8 @@ def SignUp():
             dc.addUserInfo(df, Username, UserEmail, UserPass, UserAddress)
             #write new data into file
             dc.writeUserData(df, "userData.pkl")
-           # http.get(url_for('base'))
-            return render_template("home.hl")
+            return redirect(url_for('base'))
+            # return render_template("home.hl")
     else:
         return render_template("signUp.hl")
 
