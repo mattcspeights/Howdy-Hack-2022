@@ -17,11 +17,11 @@
       <div class ="column">
         <div class = "card">
         <p>
-          <b>Online Voter Form at <a href = "https://tamuhack.com/">TAMUhack</a> Hackathon 2022</b>
+          <b>Augene Chung</b>
         </p>
         <p>
-        I attended my first Hackathon hosted at Texas A&M, where I sought out to create an online voter form.
-        This was my first attempt at creating a front-end web application, and even though it wasn't completed or close to being a viable product it was a great experience for myself.
+        I'm a freshman General Engineering student, aspiring to be a Computer Science student, at Texas A&M and 
+        this is my first hackathon! I really enjoy playing the guitar and messing around with friends.
         </p>
       </div>
       </div>
@@ -29,15 +29,42 @@
       <div class = "column">
         <div class = "card">
           <p>
-            <b>Matrices, Neural Networks, and MNIST in C/C++</b>
+            <b>Killian Crittenden</b>
             <br>
           </p>
           <p>
-          Over the months in the summer of 2022, I started relearning linear algebra and teaching myself fourier series.
-          Out of this personal learning goal came an interest in applying my knowledge to C/C++ libraries created by myself.
+          I'm a sophomore Computer Engineering student at Texas A&M University, and this is my second hackathon! I'm a Student Analyst
+          for the Texas A&M Technology Services.
           </p>
         </div>
       </div>
+
+      <div class = "column">
+        <div class = "card">
+          <p>
+            <b>Matthew Speights</b>
+            <br>
+          </p>
+          <p>
+          I'm a sophomore Computer Science student at Texas A&M University, and this is my first hackathon! 
+          As I always like to say, "bro I'm always on the flipping grind".
+          </p>
+        </div>
+      </div>
+
+      <div class = "column">
+        <div class = "card">
+          <p>
+            <b>Aadith Thiruvallarai</b>
+            <br>
+          </p>
+          <p>
+          I'm a junior Computer Science student at Texas A&M University, and this is my second hackathon! I enjoy reading and hanging
+          out with dogs and cats.
+          </p>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
