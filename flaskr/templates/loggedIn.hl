@@ -33,9 +33,9 @@
           </div>
         </div>
           <form method="post">
-            <label for="origin"><h2>Origin:</h2></label>
+            <label for="origin">Origin</label>
 				    <input type="text" id="origin" name="origin" placeholder="123 Hello World Ln"><br>
-            <label for="hours"><h2>Hours</h2></label>
+            <label for="hours">Hours</label>
             <select name="hours" id="hours">
               <option value="1">1</option>
               <option value="2">2</option>
