@@ -36,11 +36,11 @@
           <h2>Sign-In</h2>
           <form method = "post">
 		    <label for="fname">Username:</label><br>
-		    <input type="text" id="uname" name="uname" placeholder="John"><br>
+		    <input type="text" id="uname" name="uname" placeholder="john.doe"><br>
 		    <label for="pword">Password:</label><br>
-		    <input type="password" id="pword" name="pword" placeholder="Doe"><br><br>
+		    <input type="password" id="pword" name="pword" placeholder="password"><br><br>
 			<button id = "signin">Submit</button><br>
-			<a href = {{url_for('signUp')}}>Not Registered? Create Account</a>
+			<a href = "{{url_for('signUp')}}">Not Registered? Create Account</a>
 		    
 		  </form>
         </div>

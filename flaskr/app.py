@@ -51,7 +51,7 @@ def LoggedIn():
     #update with where the user gets redirected if pass or uname is wrong
     return render_template("loggedIn.hl")
 
-@bp.route('/signUp', methods=['POST'])
+@bp.route('/signUp', methods=['POST', 'GET'])
 def SignUp():
     if request.method == "POST":
         print("signup")
@@ -63,13 +63,17 @@ def SignUp():
         UserPass = request.form.get("pword")
         #validate username
         if dc.inDf(df, Username):
-            pass
+            print("invalid username")
+            userExists = True
+            return render_template("signUp.hl", userExists=userExists)
         else:
             #take collected info and add a new user
             dc.addUserInfo(df, Username, UserEmail, UserPass, UserAddress)
+            return render_template("signIn.hl")
         #write new data into file
         dc.writeUserData(df, "userData.pkl")
-    return render_template("signUp.hl")
+    else:
+        return render_template("signUp.hl")
 
 @bp.route('/about')
 def about():

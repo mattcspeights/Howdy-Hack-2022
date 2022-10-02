@@ -15,6 +15,9 @@
   <div class="row">
     
     <div class ="column" id="su">
+      {% if userExists %}
+			<b>Username Taken</b>
+			{% endif %}
       <div class = "card">
 		    <h2>Sign-Up</h2>
 		    <form method = "post">
@@ -26,12 +29,14 @@
 			    <input type="text" id="email" name="email" placeholder="john.doe@email.com"><br>
 			    <label for="email">Address:</label><br>
 			    <input type="text" id="address" name="address" placeholder="123 Hello World Ln"><br><br>
+          <label for="fname">Username:</label><br>
+		      <input type="text" id="uname" name="uname" placeholder="john.doe"><br>
+		      <label for="pword">Password:</label><br>
+		      <input type="password" id="pword" name="pword" placeholder="password"><br><br>
 			    <button id = "signup">Submit</button>
 		    </form> 
 		  </div>
     </div>
-      
-
   </div>
 	<script src="../static/script.js"></script>
 </body>
