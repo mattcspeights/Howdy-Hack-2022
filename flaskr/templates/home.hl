@@ -17,7 +17,7 @@
       <div class ="column">
         <div class = "card">
 		  <h2>Sign-Up</h2>
-		  <form>
+		  <form method = "post">
 			<label for="fname">First name:</label><br>
 			<input type="text" id="fname" name="fname" placeholder="John"><br>
 			<label for="lname">Last name:</label><br>
@@ -26,7 +26,7 @@
 			<input type="text" id="email" name="email" placeholder="john.doe@email.com"><br>
 			<label for="email">Address:</label><br>
 			<input type="text" id="address" name="address" placeholder="123 Hello World Ln"><br><br>
-			<input type="submit" value="Submit">
+			<button id = "signup">Submit</button>
 		  </form> 
 		</div>
       </div>
@@ -34,12 +34,12 @@
       <div class = "column">
         <div class = "card">
           <h2>Sign-In</h2>
-          <form>
+          <form method = "post">
 		    <label for="fname">Username:</label><br>
 		    <input type="text" id="uname" name="uname" placeholder="John"><br>
 		    <label for="pword">Password:</label><br>
 		    <input type="password" id="pword" name="pword" placeholder="Doe"><br><br>
-		    <input type="submit" value="Submit">
+		    <button id = "signin">Submit</button>
 		  </form>
         </div>
       </div>
